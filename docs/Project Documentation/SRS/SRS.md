@@ -25,7 +25,7 @@
 
 ### 2. Требования пользователя <a name="2"></a>
 #### 2.1. Интерфейс пользователя <a name="2.2"></a>
-Графический интерфейс проекта представлен с помощью мокапов [главного окна]( https://github.com/Kiryl7/-Schedule/blob/master/docs/Project%20Documentation/mockups/mockups.png ).
+Графический интерфейс проекта представлен с помощью мокапов [главного окна]( https://github.com/Kiryl7/-Schedule/blob/master/docs/Project%20Documentation/mockups/mockups.png ) и [окна вывода]( https://github.com/Kiryl7/-Schedule/blob/master/docs/Project%20Documentation/mockups/mockups2.png )
 
 #### 2.2. Характеристики пользователей <a name="2.3"></a>
 Целевая аудиория:
