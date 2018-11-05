@@ -7,4 +7,5 @@ Schedule это десктопное приложение для разрабо�
 ### Sequence diagrams: ([Ru](https://github.com/Kiryl7/-Schedule/tree/master/docs/Project%20Documentation/Sequence))
 ### State diagrams: ([Ru](https://github.com/Kiryl7/-Schedule/tree/master/docs/Project%20Documentation/State))
 ### Class diagrams:([Ru](https://github.com/Kiryl7/-Schedule/blob/master/docs/Project%20Documentation/Class/Class.png))
+### Component diagrams:([Ru](https://github.com/Kiryl7/-Schedule/tree/master/docs/Project%20Documentation/Components))
 
