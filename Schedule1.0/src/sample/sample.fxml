@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="550.0" prefWidth="700.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller" >
+    <children>
+        <AnchorPane maxWidth="1.7976931348623157E308" prefHeight="138.0" prefWidth="700.0" style="-fx-background-color: #757575;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="226.0" layoutY="35.0" prefHeight="68.0" prefWidth="248.0" text="Schedule" textAlignment="CENTER" textFill="#6249f5" AnchorPane.leftAnchor="226.0" AnchorPane.rightAnchor="226.0">
+                    <font>
+                        <Font name="Candara Italic" size="57.0" />
+                    </font></Label>
+                <Button fx:id="StartButton" layoutX="14.0" layoutY="56.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="174.0" text="Составить расписание" textFill="#6049f5" />
+                <Button fx:id="OutButton" layoutX="14.0" layoutY="100.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="174.0" text="Вывести расписание" textFill="#6249f5" />
+                <Button fx:id="closeButton" cancelButton="true" layoutX="615.0" layoutY="100.0" mnemonicParsing="false" onAction="#CloseButtonAction" text="Выход" textFill="#6249f5" AnchorPane.rightAnchor="21.0" />
+                <Button fx:id="SaveButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#SaveButtonAction" prefHeight="31.0" prefWidth="174.0" text="Сохранить данные" textFill="#6249f5" />
+            </children></AnchorPane>
+        <TextField fx:id="z0" layoutX="14.0" layoutY="147.0" prefHeight="31.0" prefWidth="279.0" promptText="Максимальное число занятий в день" />
+        <Label layoutX="14.0" layoutY="194.0" text="Список предметов" textFill="#fffafa" />
+        <Label layoutX="404.0" layoutY="194.0" text="Часы в неделю" textFill="WHITE" AnchorPane.rightAnchor="192.0" />
+        <Label layoutX="595.0" layoutY="194.0" text="Часы в день" textFill="WHITE" AnchorPane.rightAnchor="6.0" />
+        <Label layoutX="305.0" layoutY="138.0" text="1 час = 1 занятие" textFill="WHITE">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="404.0" layoutY="168.0" text="↓↓↓Вводить максимальное значение↓↓↓" textFill="WHITE" AnchorPane.rightAnchor="24.0" />
+        <TextField fx:id="p1" layoutX="14.0" layoutY="215.0" prefHeight="31.0" prefWidth="279.0" promptText="Введите наименование предмета 1" />
+        <TextField fx:id="p2" layoutX="14.0" layoutY="246.0" prefHeight="31.0" prefWidth="279.0" promptText="Введите наименование предмета 2" />
+        <TextField fx:id="p3" layoutX="14.0" layoutY="275.0" prefHeight="31.0" prefWidth="279.0" promptText="Введите наименование предмета 3" />
+        <TextField fx:id="p4" layoutX="14.0" layoutY="306.0" prefHeight="31.0" prefWidth="279.0" promptText="Введите наименование предмета 4" />
+        <TextField fx:id="p5" layoutX="14.0" layoutY="337.0" prefHeight="31.0" prefWidth="279.0" promptText="Введите наименование предмета 5" />
+        <TextField fx:id="p6" layoutX="14.0" layoutY="368.0" prefHeight="31.0" prefWidth="279.0" promptText="Введите наименование предмета 6" />
+        <TextField fx:id="p7" layoutX="14.0" layoutY="399.0" prefHeight="31.0" prefWidth="279.0" promptText="Введите наименование предмета 7" />
+        <TextField fx:id="p8" layoutX="14.0" layoutY="430.0" prefHeight="31.0" prefWidth="279.0" promptText="Введите наименование предмета 8" />
+        <TextField fx:id="p9" layoutX="14.0" layoutY="461.0" prefHeight="31.0" prefWidth="279.0" promptText="Введите наименование предмета 9" />
+        <TextField fx:id="p10" layoutX="14.0" layoutY="492.0" prefHeight="31.0" prefWidth="279.0" promptText="Введите наименование предмета 10" />
+        <TextField fx:id="p11" layoutX="14.0" layoutY="521.0" prefHeight="31.0" prefWidth="279.0" promptText="Введите наименование предмета 11" />
+        <TextField fx:id="p12" layoutX="14.0" layoutY="552.0" prefHeight="31.0" prefWidth="279.0" promptText="Введите наименование предмета 12" />
+        <TextField fx:id="p13" layoutX="14.0" layoutY="583.0" prefHeight="31.0" prefWidth="279.0" promptText="Введите наименование предмета 13" />
+        <TextField fx:id="p14" layoutX="14.0" layoutY="614.0" prefHeight="31.0" prefWidth="279.0" promptText="Введите наименование предмета 14" />
+        <TextField fx:id="p15" layoutX="14.0" layoutY="645.0" prefHeight="31.0" prefWidth="279.0" promptText="Введите наименование предмета 15" />
+        <TextField fx:id="p16" layoutX="14.0" layoutY="676.0" prefHeight="31.0" prefWidth="279.0" promptText="Введите наименование предмета 16" />
+        <TextField fx:id="p17" layoutX="14.0" layoutY="707.0" prefHeight="31.0" prefWidth="279.0" promptText="Введите наименование предмета 17" />
+        <TextField fx:id="p18" layoutX="14.0" layoutY="738.0" prefHeight="31.0" prefWidth="279.0" promptText="Введите наименование предмета 18" />
+        <TextField fx:id="n1" layoutX="404.0" layoutY="215.0" prefHeight="31.0" prefWidth="110.0" promptText="0.5     1     1.5" AnchorPane.rightAnchor="186.0" />
+        <TextField fx:id="n2" layoutX="404.0" layoutY="246.0" prefHeight="31.0" prefWidth="110.0" promptText="0.5     1     1.5" AnchorPane.rightAnchor="186.0" />
+        <TextField fx:id="n3" layoutX="404.0" layoutY="275.0" prefHeight="31.0" prefWidth="110.0" promptText="0.5     1     1.5" AnchorPane.rightAnchor="186.0" />
+        <TextField fx:id="n4" layoutX="404.0" layoutY="306.0" prefHeight="31.0" prefWidth="110.0" promptText="0.5     1     1.5" AnchorPane.rightAnchor="186.0" />
+        <TextField fx:id="n5" layoutX="404.0" layoutY="337.0" prefHeight="31.0" prefWidth="110.0" promptText="0.5     1     1.5" AnchorPane.rightAnchor="186.0" />
+        <TextField fx:id="n6" layoutX="404.0" layoutY="368.0" prefHeight="31.0" prefWidth="110.0" promptText="0.5     1     1.5" AnchorPane.rightAnchor="186.0" />
+        <TextField fx:id="n7" layoutX="404.0" layoutY="399.0" prefHeight="31.0" prefWidth="110.0" promptText="0.5     1     1.5" AnchorPane.rightAnchor="186.0" />
+        <TextField fx:id="n8" layoutX="404.0" layoutY="430.0" prefHeight="31.0" prefWidth="110.0" promptText="0.5     1     1.5" AnchorPane.rightAnchor="186.0" />
+        <TextField fx:id="n9" layoutX="404.0" layoutY="461.0" prefHeight="31.0" prefWidth="110.0" promptText="0.5     1     1.5" AnchorPane.rightAnchor="186.0" />
+        <TextField fx:id="n10" layoutX="404.0" layoutY="492.0" prefHeight="31.0" prefWidth="110.0" promptText="0.5     1     1.5" AnchorPane.rightAnchor="186.0" />
+        <TextField fx:id="n11" layoutX="404.0" layoutY="521.0" prefHeight="31.0" prefWidth="110.0" promptText="0.5     1     1.5" AnchorPane.rightAnchor="186.0" />
+        <TextField fx:id="n12" layoutX="404.0" layoutY="552.0" prefHeight="31.0" prefWidth="110.0" promptText="0.5     1     1.5" AnchorPane.rightAnchor="186.0" />
+        <TextField fx:id="n13" layoutX="404.0" layoutY="583.0" prefHeight="31.0" prefWidth="110.0" promptText="0.5     1     1.5" AnchorPane.rightAnchor="186.0" />
+        <TextField fx:id="n14" layoutX="404.0" layoutY="614.0" prefHeight="31.0" prefWidth="110.0" promptText="0.5     1     1.5" AnchorPane.rightAnchor="186.0" />
+        <TextField fx:id="n15" layoutX="404.0" layoutY="645.0" prefHeight="31.0" prefWidth="110.0" promptText="0.5     1     1.5" AnchorPane.rightAnchor="186.0" />
+        <TextField fx:id="n16" layoutX="404.0" layoutY="676.0" prefHeight="31.0" prefWidth="110.0" promptText="0.5     1     1.5" AnchorPane.rightAnchor="186.0" />
+        <TextField fx:id="n17" layoutX="404.0" layoutY="707.0" prefHeight="31.0" prefWidth="110.0" promptText="0.5     1     1.5" AnchorPane.rightAnchor="186.0" />
+        <TextField fx:id="n18" layoutX="404.0" layoutY="738.0" prefHeight="31.0" prefWidth="110.0" promptText="0.5     1     1.5" AnchorPane.rightAnchor="186.0" />
+        <TextField fx:id="d1" layoutX="610.0" layoutY="215.0" prefHeight="31.0" prefWidth="84.0" promptText="1     2     3" AnchorPane.rightAnchor="6.0" />
+        <TextField fx:id="d2" layoutX="610.0" layoutY="246.0" prefHeight="31.0" prefWidth="84.0" promptText="1     2     3" AnchorPane.rightAnchor="6.0" />
+        <TextField fx:id="d3" layoutX="610.0" layoutY="275.0" prefHeight="31.0" prefWidth="84.0" promptText="1     2     3" AnchorPane.rightAnchor="6.0" />
+        <TextField fx:id="d4" layoutX="610.0" layoutY="306.0" prefHeight="31.0" prefWidth="84.0" promptText="1     2     3" AnchorPane.rightAnchor="6.0" />
+        <TextField fx:id="d5" layoutX="610.0" layoutY="337.0" prefHeight="31.0" prefWidth="84.0" promptText="1     2     3" AnchorPane.rightAnchor="6.0" />
+        <TextField fx:id="d6" layoutX="610.0" layoutY="368.0" prefHeight="31.0" prefWidth="84.0" promptText="1     2     3" AnchorPane.rightAnchor="6.0" />
+        <TextField fx:id="d7" layoutX="610.0" layoutY="399.0" prefHeight="31.0" prefWidth="84.0" promptText="1     2     3" AnchorPane.rightAnchor="6.0" />
+        <TextField fx:id="d8" layoutX="610.0" layoutY="430.0" prefHeight="31.0" prefWidth="84.0" promptText="1     2     3" AnchorPane.rightAnchor="6.0" />
+        <TextField fx:id="d9" layoutX="610.0" layoutY="461.0" prefHeight="31.0" prefWidth="84.0" promptText="1     2     3" AnchorPane.rightAnchor="6.0" />
+        <TextField fx:id="d10" layoutX="610.0" layoutY="492.0" prefHeight="31.0" prefWidth="84.0" promptText="1     2     3" AnchorPane.rightAnchor="6.0" />
+        <TextField fx:id="d11" layoutX="610.0" layoutY="521.0" prefHeight="31.0" prefWidth="84.0" promptText="1     2     3" AnchorPane.rightAnchor="6.0" />
+        <TextField fx:id="d12" layoutX="610.0" layoutY="552.0" prefHeight="31.0" prefWidth="84.0" promptText="1     2     3" AnchorPane.rightAnchor="6.0" />
+        <TextField fx:id="d13" layoutX="610.0" layoutY="583.0" prefHeight="31.0" prefWidth="84.0" promptText="1     2     3" AnchorPane.rightAnchor="6.0" />
+        <TextField fx:id="d14" layoutX="610.0" layoutY="614.0" prefHeight="31.0" prefWidth="84.0" promptText="1     2     3" AnchorPane.rightAnchor="6.0" />
+        <TextField fx:id="d15" layoutX="610.0" layoutY="645.0" prefHeight="31.0" prefWidth="84.0" promptText="1     2     3" AnchorPane.rightAnchor="6.0" />
+        <TextField fx:id="d16" layoutX="610.0" layoutY="676.0" prefHeight="31.0" prefWidth="84.0" promptText="1     2     3" AnchorPane.rightAnchor="6.0" />
+        <TextField fx:id="d17" layoutX="610.0" layoutY="707.0" prefHeight="31.0" prefWidth="84.0" promptText="1     2     3" AnchorPane.rightAnchor="6.0" />
+        <TextField fx:id="d18" layoutX="610.0" layoutY="738.0" prefHeight="31.0" prefWidth="84.0" promptText="1     2     3" AnchorPane.rightAnchor="6.0" />
+    </children>
+</AnchorPane>
