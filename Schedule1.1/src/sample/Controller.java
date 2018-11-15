@@ -10,10 +10,32 @@ import java.util.ArrayList;
 
 public class Controller {
 
-    ArrayList<String> NS = new ArrayList<String>(); //NS - name subject
-    ArrayList<Double> Week = new ArrayList<Double>();
-    ArrayList<Integer> Day = new ArrayList<Integer>();
-    Integer MS; //MS - max subject (1 day)
+    private static Controller INSTANCE = new Controller();
+
+    public static Controller getINSTANCE(){return INSTANCE;}
+
+    public ArrayList<String> getNS() {
+        return NS;
+    }
+
+    public void setNS(ArrayList<String> NS) {
+        this.NS = NS;
+    }
+
+    public void setMS(Integer MS) {
+        this.MS = MS;
+    }
+
+
+    public Integer getMS() {
+        return MS;
+    }
+
+    private static ArrayList<String> NS = new ArrayList<String>(); //NS - name subject
+    ArrayList Week = new ArrayList<Double>();
+    ArrayList Day = new ArrayList<Integer>();
+    private static Integer MS = 0; //MS - max subject (1 day)
+
 
     @FXML
     TextField z0;
@@ -143,9 +165,10 @@ public class Controller {
     @FXML
     public void SaveButtonAction(ActionEvent event)
     {
-        if (z0.isCache()) {
-            MS = Integer.decode(z0.getText());
-        }
+
+        MS = Integer.decode(z0.getText());
+
+        //System.out.println(MS.toString());
 
         NS.add(p1.getText());
         NS.add(p2.getText());
@@ -276,8 +299,15 @@ public class Controller {
             Day.add(Integer.decode(d18.getText()));
         }
 
-        //System.out.println(MS.toString());
-       //SaveButton.setText("Saved");
+       // SaveButton.setText("Saved");
+    }
+
+    @FXML
+    public Button OutButton;
+
+    @FXML
+    public void OutButtonAction(ActionEvent event) {
+        Output.out();
     }
 }
 
