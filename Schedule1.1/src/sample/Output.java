@@ -1,7 +1,5 @@
 package sample;
 
-import javax.swing.*;
-import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
@@ -16,11 +14,11 @@ public class Output extends Controller{
         Writer writer = null;
 
         ArrayList <String> a1 = new ArrayList<String>();
-        a1.add("Пн");
-        a1.add("Вт");
-        a1.add("Ср");
-        a1.add("Чт");
-        a1.add("Пт");
+        a1.add("Пн:");
+        a1.add("Вт:");
+        a1.add("Ср:");
+        a1.add("Чт:");
+        a1.add("Пт:");
 
         try {
             writer = new FileWriter("D://3//5sem/schedule.txt");
@@ -29,33 +27,38 @@ public class Output extends Controller{
             ArrayList<String> arrayList = cntrll.getNS();
             Integer ms = cntrll.getMS();
 
-            int fl1 = 0;
+            int fl1 = 0;//для прохода по списку предметов
 
-            for (String b : a1) {
-                Integer fl = 0;
-                writer.append("\n");
-                writer.write(b);
-                for (int i = fl1; i < arrayList.size(); i++) {
-                    writer.append("\t");
-                    writer.write(arrayList.get(i));
-                    fl1 ++;
-                    fl ++;
-                    if (fl == ms) break;
-                }
-                /*for (String a : arrayList) { //a,b - просто переменные, ничего серьёзного, честно
-                    writer.append("\t");
-                    writer.write(a);
-                    fl ++;
-                    if (fl == ms) break;;
-                    //writer.write(System.getProperty("line.separator"));
-                }*/
+            int counter = 0;
+
+            for (int i = 0; i < arrayList.size(); i++) {
+                if (arrayList.get(i).isEmpty());
+                    else counter ++;
             }
 
-           /* for(String a : a1){
-                System.out.println(a + "/t");
-               // for()
-            }*/
+            System.out.println(counter);
+            double p = counter/(5*ms); //переменная для вывода нужного количества недель
+            Math.round(p);
 
+            for (double j = 0; j <= p; j++) {
+                    if (fl1 !=0) writer.append("\n");
+                        else {
+                        writer.write("\tSCHEDULE");
+                        writer.append("\n");
+                    }
+                for (String b : a1) { //go to very need...
+                    Integer fl = 0; //для вывода ограниченного количества предметов в день
+                    if (fl1 != 0) writer.append("\n");
+                    writer.write(b);
+                    for (int i = fl1; i < arrayList.size(); i++) {
+                        writer.append("\t");
+                        writer.write(arrayList.get(i));
+                        fl1++;
+                        fl++;
+                        if (fl == ms) break;
+                    }
+                }
+            }
             writer.flush();
             writer.close();
         }

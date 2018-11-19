@@ -6,6 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import javax.lang.model.type.NullType;
 import java.util.ArrayList;
 
 public class Controller {
@@ -162,142 +163,46 @@ public class Controller {
     @FXML
     public Button SaveButton;
 
-    @FXML
-    public void SaveButtonAction(ActionEvent event)
-    {
+        @FXML
+        public void SaveButtonAction(ActionEvent event)
+        {
 
-        MS = Integer.decode(z0.getText());
+            MS = Integer.decode(z0.getText());
 
-        //System.out.println(MS.toString());
+            //System.out.println(MS.toString());
 
-        NS.add(p1.getText());
-        NS.add(p2.getText());
-        NS.add(p3.getText());
-        NS.add(p4.getText());
-        NS.add(p5.getText());
-        NS.add(p6.getText());
-        NS.add(p7.getText());
-        NS.add(p8.getText());
-        NS.add(p9.getText());
-        NS.add(p10.getText());
-        NS.add(p11.getText());
-        NS.add(p12.getText());
-        NS.add(p13.getText());
-        NS.add(p14.getText());
-        NS.add(p15.getText());
-        NS.add(p16.getText());
-        NS.add(p17.getText());
-        NS.add(p18.getText());
+            NS.add(p1.getText());
+            NS.add(p2.getText());
+            NS.add(p3.getText());
+            NS.add(p4.getText());
+            NS.add(p5.getText());
+            NS.add(p6.getText());
+            NS.add(p7.getText());
+            NS.add(p8.getText());
+            NS.add(p9.getText());
+            NS.add(p10.getText());
+            NS.add(p11.getText());
+            NS.add(p12.getText());
+            NS.add(p13.getText());
+            NS.add(p14.getText());
+            NS.add(p15.getText());
+            NS.add(p16.getText());
+            NS.add(p17.getText());
+            NS.add(p18.getText());
 
-        if (n1.isCache()) {
-            Week.add(Double.parseDouble(n1.getText()));
-        }
-        if (n2.isCache()) {
-            Week.add(Double.parseDouble(n2.getText()));
-        }
-        if (n3.isCache()) {
-            Week.add(Double.parseDouble(n3.getText()));
-        }
-        if (n4.isCache()) {
-            Week.add(Double.parseDouble(n4.getText()));
-        }
-        if (n5.isCache()) {
-            Week.add(Double.parseDouble(n5.getText()));
-        }
-        if (n6.isCache()) {
-            Week.add(Double.parseDouble(n6.getText()));
-        }
-        if (n7.isCache()) {
-            Week.add(Double.parseDouble(n7.getText()));
-        }
-        if (n8.isCache()) {
-            Week.add(Double.parseDouble(n8.getText()));
-        }
-        if (n9.isCache()) {
-            Week.add(Double.parseDouble(n9.getText()));
-        }
-        if (n10.isCache()) {
-            Week.add(Double.parseDouble(n10.getText()));
-        }
-        if (n11.isCache()) {
-            Week.add(Double.parseDouble(n11.getText()));
-        }
-        if (n12.isCache()) {
-            Week.add(Double.parseDouble(n12.getText()));
-        }
-        if (n13.isCache()) {
-            Week.add(Double.parseDouble(n13.getText()));
-        }
-        if (n14.isCache()) {
-            Week.add(Double.parseDouble(n14.getText()));
-        }
-        if (n15.isCache()) {
-            Week.add(Double.parseDouble(n15.getText()));
-        }
-        if (n16.isCache()) {
-            Week.add(Double.parseDouble(n16.getText()));
-        }
-        if (n17.isCache()) {
-            Week.add(Double.parseDouble(n17.getText()));
-        }
-        if (n18.isCache()) {
-            Week.add(Double.parseDouble(n18.getText()));
-        }
+            ArrayList N = new ArrayList<String>();
+            N.add(n1.getText());N.add(n2.getText());N.add(n3.getText());N.add(n4.getText());N.add(n5.getText());N.add(n6.getText());N.add(n7.getText());N.add(n8.getText());N.add(n9.getText());N.add(n10.getText());N.add(n11.getText());N.add(n12.getText());N.add(n13.getText());N.add(n14.getText());N.add(n15.getText());N.add(n16.getText());N.add(n17.getText());N.add(n18.getText());
 
-        if (d1.isCache()) {
-            Day.add(Integer.decode(d1.getText()));
-        }
-        if (d2.isCache()) {
-            Day.add(Integer.decode(d2.getText()));
-        }
-        if (d3.isCache()) {
-            Day.add(Integer.decode(d3.getText()));
-        }
-        if (d4.isCache()) {
-            Day.add(Integer.decode(d4.getText()));
-        }
-        if (d5.isCache()) {
-            Day.add(Integer.decode(d5.getText()));
-        }
-        if (d6.isCache()) {
-            Day.add(Integer.decode(d6.getText()));
-        }
-        if (d7.isCache()) {
-            Day.add(Integer.decode(d7.getText()));
-        }
-        if (d8.isCache()) {
-            Day.add(Integer.decode(d8.getText()));
-        }
-        if (d9.isCache()) {
-            Day.add(Integer.decode(d9.getText()));
-        }
-        if (d10.isCache()) {
-            Day.add(Integer.decode(d10.getText()));
-        }
-        if (d11.isCache()) {
-            Day.add(Integer.decode(d11.getText()));
-        }
-        if (d12.isCache()) {
-            Day.add(Integer.decode(d12.getText()));
-        }
-        if (d13.isCache()) {
-            Day.add(Integer.decode(d13.getText()));
-        }
-        if (d14.isCache()) {
-            Day.add(Integer.decode(d14.getText()));
-        }
-        if (d15.isCache()) {
-            Day.add(Integer.decode(d15.getText()));
-        }
-        if (d16.isCache()) {
-            Day.add(Integer.decode(d16.getText()));
-        }
-        if (d17.isCache()) {
-            Day.add(Integer.decode(d17.getText()));
-        }
-        if (d18.isCache()) {
-            Day.add(Integer.decode(d18.getText()));
-        }
+            for (int i = 0; i < N.size(); i++) {
+                Week.add(Double.parseDouble((String) N.get(i)));
+            }
+
+            ArrayList D = new ArrayList<Integer>();
+            D.add(d1.getText());D.add(d2.getText());D.add(d3.getText());D.add(d4.getText());D.add(d5.getText());D.add(d6.getText());D.add(d7.getText());D.add(d8.getText());D.add(d9.getText());D.add(d10.getText());D.add(d11.getText());D.add(d12.getText());D.add(d13.getText());D.add(d14.getText());D.add(d15.getText());D.add(d16.getText());D.add(d17.getText());D.add(d18.getText());
+
+            for (int i = 0; i < D.size(); i++) {
+                Day.add(Integer.decode((String) D.get(i)));
+            }
 
        // SaveButton.setText("Saved");
     }
