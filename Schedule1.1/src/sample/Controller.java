@@ -56,11 +56,26 @@ public class Controller {
 
     public void setListOfSubject(ArrayList<Subject> listOfSubject) {this.listOfSubject = listOfSubject;}
 
+    public ArrayList<Subject> getListOfSubject1() {return listOfSubject1;}
+
+    public void setListOfSubject1(ArrayList<Subject> listOfSubject1) {this.listOfSubject1 = listOfSubject1;}
+
+    public ArrayList<Subject> getListOfSubject2() {return listOfSubject2;}
+
+    public void setListOfSubject2(ArrayList<Subject> listOfSubject2) {this.listOfSubject2 = listOfSubject2;}
+
+    public ArrayList<Subject> getListOfSubject3() {return listOfSubject3;}
+
+    public void setListOfSubject3(ArrayList<Subject> listOfSubject3) {this.listOfSubject3 = listOfSubject3;}
+
 
     private static ArrayList<String> NS = new ArrayList<String>(); //NS - name subject
     private static ArrayList Week = new ArrayList<Double>();
     private static ArrayList Day = new ArrayList<Integer>();
     private static ArrayList<Subject> listOfSubject = new ArrayList();
+    private static ArrayList<Subject> listOfSubject1 = new ArrayList();
+    private static ArrayList<Subject> listOfSubject2 = new ArrayList();
+    private static ArrayList<Subject> listOfSubject3 = new ArrayList();
     private static Integer MS = 0; //MS - max subject (1 day)
 
 
@@ -185,11 +200,14 @@ public class Controller {
         primaryStage.close();
     }
 
+    int fl = 0;
+
     @FXML
     public Button SaveButton;
 
     @FXML
     public void SaveButtonAction(ActionEvent event) {
+        fl++;
 
         MS = Integer.decode(z0.getText());
 
@@ -284,6 +302,21 @@ public class Controller {
             subject = new Subject((String) NS.get(i), (Double) Week.get(i), (Integer) Day.get(i));
             listOfSubject.add(subject);
         }
+
+        for (int i = 0; i < counter; i++) {
+            subject = new Subject((String) NS.get(i), (Double) Week.get(i), (Integer) Day.get(i));
+            listOfSubject1.add(subject);
+        }
+
+        for (int i = 0; i < counter; i++) {
+            subject = new Subject((String) NS.get(i), (Double) Week.get(i), (Integer) Day.get(i));
+            listOfSubject2.add(subject);
+        }
+
+        for (int i = 0; i < counter; i++) {
+            subject = new Subject((String) NS.get(i), (Double) Week.get(i), (Integer) Day.get(i));
+            listOfSubject3.add(subject);
+        }
     }
 
     @FXML
@@ -291,14 +324,19 @@ public class Controller {
 
     @FXML
     public void OutButtonAction(ActionEvent event) {
-        Output.out();
+        if (fl > 1) {
+            Output.out();
+        }
     }
 
     @FXML
     public Button StartButton;
 
     public void StartButtonAction(ActionEvent event) {
-        Magic.calculation();
+        if (fl > 0) {
+            Magic.calculation();
+        }
+        fl++;
     }
 }
 

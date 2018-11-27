@@ -18,6 +18,9 @@ public class Magic extends Controller {
         ArrayList week = cntrll.getWeek();
         ArrayList day = cntrll.getDay();
         ArrayList<Subject> sub = cntrll.getListOfSubject();
+        ArrayList<Subject> sub1 = cntrll.getListOfSubject1();
+        ArrayList<Subject> sub2 = cntrll.getListOfSubject2();
+        ArrayList<Subject> sub3 = cntrll.getListOfSubject3();
 
         //Double num = 1.0;
         //Double num1 = 1.5;
@@ -30,11 +33,31 @@ public class Magic extends Controller {
         }
 
         for (int i = 0; i < sub.size() && i < counter; i++) {
-            Double K = sub.get(i).getK();
-            for (int j = 1; j < K; j++) {
+            Integer P = sub.get(i).getPriority();
+            for (int j = 1; j < P; j++) {
                 sub.add(sub.get(i));
             }
-            //sub.remove(sub.get(i));
+        }
+
+        for (int i = 0; i < sub1.size() && i < counter; i++) {
+            Integer P = sub1.get(i).getPriority();
+            for (int j = 1; j < P; j++) {
+                sub1.add(sub1.get(i));
+            }
+        }
+
+        for (int i = 0; i < sub2.size() && i < counter; i++) {
+            Integer P = sub2.get(i).getPriority();
+            for (int j = 1; j < P; j++) {
+                sub2.add(sub2.get(i));
+            }
+        }
+
+        for (int i = 0; i < sub3.size() && i < counter; i++) {
+            Integer P = sub3.get(i).getPriority();
+            for (int j = 1; j < P; j++) {
+                sub3.add(sub3.get(i));
+            }
         }
 
         /*for (int i = 0; i < sub.size() && i < counter; i++) {
@@ -51,6 +74,11 @@ public class Magic extends Controller {
                 sub.add(sub.get(i));
             }
         }*/
+
         Collections.shuffle(sub);
+        Collections.shuffle(sub1);
+        Collections.shuffle(sub2);
+        Collections.shuffle(sub3);
+
     }
 }
