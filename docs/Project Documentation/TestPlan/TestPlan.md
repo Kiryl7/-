@@ -101,7 +101,7 @@
 <a name="6"></a>
 ### 7. Представление результатов
 
-
+Результаты тестирования представлены в таблице(https://github.com/Kiryl7/-Schedule/blob/master/docs/Project%20Documentation/TestPlan/Test.md)
 
 <a name="7"></a>
 ### 8. Выводы
